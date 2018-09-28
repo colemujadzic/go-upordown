@@ -35,7 +35,7 @@ var client = http.Client{
 // checkCmd represents the check command
 var checkCmd = &cobra.Command{
 	Use:   "check",
-	Short: "check the status of a website",
+	Short: "Check the status of a website",
 	Args: func(checkCmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
 			return errors.New("At least one argument is required")
