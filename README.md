@@ -1,5 +1,7 @@
 # go-upordown
 
+[![Travis CI](https://img.shields.io/travis/colemujadzic/go-tweets.svg?style=for-the-badge)](https://travis-ci.org/colemujadzic/go-tweets)
+
 Check if a website is up or down with this command-line tool, written in Go using the Cobra CLI library
 
 ## Installation
@@ -22,7 +24,7 @@ Usage:
   go-upordown [command]
 
 Available Commands:
-  check       check the status of a website
+  check       Check the status of a website
   help        Help about any command
 
 Flags:
