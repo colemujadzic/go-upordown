@@ -44,8 +44,7 @@ var checkCmd = &cobra.Command{
 		return nil
 	},
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("check called")
-		site := "https://" + domain
+		site := "http://" + domain
 		request, err := http.NewRequest("HEAD", site, nil)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Couldn't make new request: %v\n", err)
@@ -57,7 +56,12 @@ var checkCmd = &cobra.Command{
 			os.Exit(1)
 		}
 		response.Body.Close()
-		fmt.Println("Status: ", response.StatusCode)
+		fmt.Println(response.StatusCode)
+		if response.StatusCode >= 500 {
+			fmt.Println(site, "is seems to be down right now!")
+		} else {
+			fmt.Println(site, "is up!")
+		}
 	},
 }
 
