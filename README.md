@@ -2,7 +2,7 @@
 
 [![Travis CI](https://img.shields.io/travis/colemujadzic/go-tweets.svg?style=for-the-badge)](https://travis-ci.org/colemujadzic/go-tweets)
 
-Check if a website is up or down with this command-line tool, written in Go using the Cobra CLI library
+Check if a website is up or down with this command-line tool, written in Go using the [Cobra](https://github.com/spf13/cobra) CLI library
 
 ## Installation
 
